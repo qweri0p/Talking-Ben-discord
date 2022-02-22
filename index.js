@@ -34,6 +34,24 @@ client.on('messageCreate',message => {
                 break;
         }
     }
+    if (message.content.startsWith('sugoma')) {
+        const sugomaEmbed = new Discord.MessageEmbed()
+            .setTitle("sougon deez nuts")
+            .setDescription("sus")
+            .setColor("#ffffff")
+            .setURL('https://sugoma.xyz/')
+            .setImage('https://sugoma.xyz/content/sumoga.jpg')
+            .setFooter("sussiest plant alive")
+        message.channel.send({ embeds:[sugomaEmbed]
+    });
+    }
+    if (message.content.startsWith('updateben')) {
+        if (message.author.id == '354943770464354306') {
+            process.exit(0);
+        } else {
+            message.channel.send('Only qweriop#0416 can update this bot.');
+        }
+    }
 });
 
 client.login(token);
