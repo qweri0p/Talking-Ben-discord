@@ -11,7 +11,8 @@ client.on('messageCreate',message => {
     let yes = message.content.toLowerCase()
     if (yes == 'ben') {message.channel.send('Ben'); return;}
     if (yes.startsWith('ben')) {
-        let randomWord = Math.floor(Math.random() * 7);
+      if (yes == 'ben github' || yes == 'ben code') {message.channel.send('https://github.com/qweri0p/talking-ben-discord'); return;}
+        let randomWord = Math.floor(Math.random() * 9);
         switch (randomWord) {
             case 0:
                 message.channel.send("Yes");
@@ -23,7 +24,7 @@ client.on('messageCreate',message => {
                 message.channel.send("Absolutely");
                 break;
             case 3:
-                message.channel.send("I think");
+                message.channel.send("True");
                 break;
             case 4:
                 message.channel.send("Most likely");
@@ -39,7 +40,10 @@ client.on('messageCreate',message => {
                 break;
             case 8:
                 message.channel.send("Absolutely not");
-                break;          
+                break;
+            case 9:
+                message.channel.send('False');
+                break;
         }
     }
     if (yes.startsWith('sugoma')) {
