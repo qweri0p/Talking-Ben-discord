@@ -12,7 +12,7 @@ client.on('messageCreate',message => {
     if (yes == 'ben') {message.channel.send('Ben'); return;}
     if (yes.startsWith('ben')) {
       if (yes == 'ben github' || yes == 'ben code') {message.channel.send('https://github.com/qweri0p/talking-ben-discord'); return;}
-        let randomWord = Math.floor(Math.random() * 9);
+        let randomWord = Math.floor(Math.random() * 10);
         switch (randomWord) {
             case 0:
                 message.channel.send("Yes");
@@ -61,7 +61,7 @@ client.on('messageCreate',message => {
         if (message.author.id == '354943770464354306') {
             process.exit(0);
         } else {
-            message.channel.send('Only qweriop#0416 can update this bot.');
+            message.channel.send('No!');
         }
     }
 });
