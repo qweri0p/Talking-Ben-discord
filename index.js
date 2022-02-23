@@ -9,6 +9,7 @@ client.once('ready', () => {
 client.on('messageCreate',message => {
     if (message.author.bot) return;
     let yes = message.content.toLowerCase()
+    if (yes == 'ben') {message.channel.send('Ben'); return;}
     if (yes.startsWith('ben')) {
         let randomWord = Math.floor(Math.random() * 7);
         switch (randomWord) {
