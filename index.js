@@ -9,7 +9,10 @@ client.once('ready', () => {
 client.on('messageCreate',message => {
     if (message.author.bot) return;
     let yes = message.content.toLowerCase()
-    if (yes == 'ben') {message.channel.send('Ben'); return;}
+    if (yes == 'ben') {message.channel.send({
+        files: ['./ben.png'],
+        content: 'Ben'
+    }); return;}
     if (yes.startsWith('ben')) {
       if (yes == 'ben github' || yes == 'ben code') {message.channel.send('https://github.com/qweri0p/talking-ben-discord'); return;}
         let randomWord = Math.floor(Math.random() * 10);
