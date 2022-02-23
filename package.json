@@ -1,15 +1,19 @@
 {
   "name": "talking-ben",
   "version": "1.0.0",
-  "description": "",
+  "description": "Talking ben Discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node .",
+    "start": "sh run.sh"
   },
   "keywords": [],
-  "author": "",
+  "author": "qweriop",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0"
   }
 }
