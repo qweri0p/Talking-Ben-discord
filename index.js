@@ -15,7 +15,7 @@ client.on('messageCreate',message => {
     }); return;}
     if (yes.startsWith('ben')) {
       if (yes == 'ben github' || yes == 'ben code') {message.channel.send('https://github.com/qweri0p/talking-ben-discord'); return;}
-        let randomWord = Math.floor(Math.random() * 10);
+        let randomWord = Math.floor(Math.random() * 12);
         switch (randomWord) {
             case 0:
                 message.channel.send("Yes");
@@ -46,6 +46,12 @@ client.on('messageCreate',message => {
                 break;
             case 9:
                 message.channel.send('False');
+                break;
+            case 10:
+                message.channel.send('Hit');
+                break;
+            case 11:
+                message.channel.send('Miss');
                 break;
         }
     }
