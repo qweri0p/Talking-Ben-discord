@@ -31,7 +31,7 @@ client.on('messageCreate',message => {
     if (yes.startsWith('ben')) {
       if (yes == 'ben github' || yes == 'ben code') {message.channel.send('https://github.com/qweri0p/talking-ben-discord'); return;}
         let randomWord = Math.floor(Math.random() * responses.length);
-	message.channel.send(responses[randomword]);
+	message.channel.send(responses[randomWord]);
 	return;
     }
     if (yes.startsWith('sugoma')) {
