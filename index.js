@@ -14,7 +14,9 @@ const responses = [
 	"Absolutely",
 	"Absolutely not",
 	"Yep",
-	"Nope"
+	"Nope",
+	"Positive",
+	"Negative"
 ]
 
 client.once('ready', () => {
