@@ -2,6 +2,21 @@ const Discord = require('discord.js');
 const { token } = require('./config.json');
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
+const responses = [
+	"Yes",
+	"No",
+	"True",
+	"False",
+	"Hit",
+	"Miss",
+	"Definitely",
+	"Definitely not",
+	"Absolutely",
+	"Absolutely not",
+	"Yep",
+	"Nope"
+]
+
 client.once('ready', () => {
     client.user.setPresence({ activities: [{ name: 'Yes?' }], status: 'online' });
     console.log("yes?");
@@ -15,45 +30,9 @@ client.on('messageCreate',message => {
     }); return;}
     if (yes.startsWith('ben')) {
       if (yes == 'ben github' || yes == 'ben code') {message.channel.send('https://github.com/qweri0p/talking-ben-discord'); return;}
-        let randomWord = Math.floor(Math.random() * 12);
-        switch (randomWord) {
-            case 0:
-                message.channel.send("Yes");
-                break;
-            case 1:
-                message.channel.send("No");
-                break;
-            case 2:
-                message.channel.send("Absolutely");
-                break;
-            case 3:
-                message.channel.send("True");
-                break;
-            case 4:
-                message.channel.send("Most likely");
-                break;
-            case 5:
-                message.channel.send("Definitely");
-                break;
-            case 6:
-                message.channel.send("Nope");
-                break;
-            case 7:
-                message.channel.send("Definitely not");
-                break;
-            case 8:
-                message.channel.send("Absolutely not");
-                break;
-            case 9:
-                message.channel.send('False');
-                break;
-            case 10:
-                message.channel.send('Hit');
-                break;
-            case 11:
-                message.channel.send('Miss');
-                break;
-        }
+        let randomWord = Math.floor(Math.random() * responses.length);
+	message.channel.send(responses[randomword]);
+	return;
     }
     if (yes.startsWith('sugoma')) {
         const sugomaEmbed = new Discord.MessageEmbed()
