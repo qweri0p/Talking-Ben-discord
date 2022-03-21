@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { token } = require('./config.json');
+const config = require('./config.json');
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
 const responses = [
@@ -43,7 +43,7 @@ client.on('messageCreate',message => {
             .setColor("#ffffff")
             .setURL('https://sugoma.xyz/')
             .setImage('https://sugoma.xyz/content/sumoga.jpg')
-            .setFooter("sussiest plant alive")
+            .setFooter({text: "sussiest dog alive"})
         message.channel.send({ embeds:[sugomaEmbed]
     });
     }
@@ -56,4 +56,4 @@ client.on('messageCreate',message => {
     }
 });
 
-client.login(token);
+client.login(config.token);
