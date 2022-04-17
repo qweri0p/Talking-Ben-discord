@@ -33,6 +33,10 @@ client.on('messageCreate', message => {
 			content: 'Ben',
 		}); return;
 	}
+	if (yes.startsWith('ben say ') || yes.startsWith('ben zeg ')) {
+		say.command(message);
+		return;
+	}
 	if (yes.startsWith('ben')) {
 		if (yes == 'ben github' || yes == 'ben code') {
 			message.channel.send('https://github.com/qweri0p/talking-ben-discord');
@@ -51,9 +55,6 @@ client.on('messageCreate', message => {
 			.setImage('https://sugoma.xyz/content/sumoga.jpg')
 			.setFooter({ text: 'sussiest dog alive' });
 		message.channel.send({ embeds:[sugomaEmbed] });
-	}
-	if (yes.startsWith('ben say ') || yes.startsWith('ben zeg ')) {
-		say.command(message);
 	}
 	if (yes.startsWith('updateben')) {
 		if (message.author.id == '354943770464354306') {
