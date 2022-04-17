@@ -46,7 +46,7 @@ const funnyArray = [
 
 ];
 function command(message) {
-	if (!message.member.roles.cache.has('953923327460802620')) {
+	if (!message.member.roles.cache.has('918847335717556224')) {
 		const arg = message.content.slice(8);
 		message.delete();
 		message.channel.send(arg);
