@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
+const say = require('./say.js');
 const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES'] });
 
 const responses = [
@@ -51,7 +52,10 @@ client.on('messageCreate', message => {
 			.setFooter({ text: 'sussiest dog alive' });
 		message.channel.send({ embeds:[sugomaEmbed] });
 	}
-	if (message.content.startsWith('updateben')) {
+	if (yes.startsWith('ben say ') || yes.startsWith('ben zeg ')) {
+		say.command(message);
+	}
+	if (yes.startsWith('updateben')) {
 		if (message.author.id == '354943770464354306') {
 			process.exit(0);
 		}
