@@ -19,6 +19,12 @@ const responses = [
 	'Positive',
 	'Negative',
 ];
+const originalResponses = [
+	'Yes',
+	'No',
+	'Ohoho',
+	'Eugh',
+];
 
 client.once('ready', () => {
 	client.user.setPresence({ activities: [{ name: 'Yes?' }], status: 'online' });
@@ -43,7 +49,7 @@ client.on('messageCreate', message => {
 			return;
 		}
 		const randomWord = Math.floor(Math.random() * responses.length);
-		message.channel.send(responses[randomWord]);
+		message.channel.send(originalResponses[randomWord]);
 		return;
 	}
 	if (yes.startsWith('sugoma')) {
