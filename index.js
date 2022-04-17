@@ -48,7 +48,7 @@ client.on('messageCreate', message => {
 			message.channel.send('https://github.com/qweri0p/talking-ben-discord');
 			return;
 		}
-		const randomWord = Math.floor(Math.random() * responses.length);
+		const randomWord = Math.floor(Math.random() * originalResponses.length);
 		message.channel.send(originalResponses[randomWord]);
 		return;
 	}
