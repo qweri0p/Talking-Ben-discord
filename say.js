@@ -43,7 +43,8 @@ const funnyArray = [
 	'stop being cringes',
 	'stop being cringus',
 	'stop being cringuses',
-
+	'https://twitch.tv/watermeloennnn',
+  'https://www.grubhub.com/'
 ];
 function command(message) {
 	if (!message.member.roles.cache.has('918847335717556224')) {
